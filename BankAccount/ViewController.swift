@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     var account = BankAccount(balance: 0.0)
     
     @IBAction func deposit(_ sender: UIButton) {
+        //  The 'if let' structure tests the userInput.text optional and
+        //  proceeds only if it has a non-nil value
         if let string = userInput.text {
             let strToDoub = Double(string)!
             let newBalance = account.deposit(amount: strToDoub)
